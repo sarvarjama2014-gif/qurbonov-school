@@ -67,6 +67,25 @@ body {
   opacity: 1 !important;
 }
 
+.heroSwiper .swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.4 !important;
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+  background: #E31E24 !important;
+  opacity: 1 !important;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

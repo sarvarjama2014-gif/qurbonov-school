@@ -61,6 +61,19 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+  var heroSwiper = new Swiper('.heroSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
   var studentSwiper = new Swiper('.studentSwiper', {
     slidesPerView: 'auto',
     spaceBetween: 20,

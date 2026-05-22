@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qurbonov School – Tibbiyot yo'nalishiga kalit eshiklarini biz bilan oching!</title>
+  <meta name="description" content="Qurbonov School – zamonaviy o'qitish usullari va yuqori natijalar. Biologiya, kimyo, matematika, ingliz tili va boshqa fanlardan kurslar." />
+  <meta name="keywords" content="Qurbonov School, tibbiyot kurslari, biologiya, kimyo, matematika, ingliz tili, Toshkent, o'quv markazi" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Qurbonov School – Tibbiyot yo'nalishiga kalit eshiklarini biz bilan oching!" />
+  <meta property="og:description" content="Zamonaviy o'qitish usullari va yuqori natijalar. 5000+ talabalar, 12+ yo'nalishlar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.qurbonov-school.uz/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-[Montserrat] bg-white text-[#080036] overflow-x-hidden">
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="fixed inset-0 z-[100] bg-white flex items-center justify-center transition-opacity duration-500">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#080036] shadow-md">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-16 flex items-center justify-between h-[72px] md:h-[90px]">
+      <div class="flex items-center gap-3 md:gap-4">
+        <button id="menuToggle" class="lg:hidden text-white" aria-label="Menu">
+          <svg width="30" height="26" viewBox="0 0 30 26" fill="none">
+            <rect width="30" height="4" rx="2" fill="#E31E24"/>
+            <rect y="11" width="30" height="4" rx="2" fill="#E31E24"/>
+            <rect y="22" width="30" height="4" rx="2" fill="#E31E24"/>
+          </svg>
+        </button>
+        <a href="/" class="flex items-center gap-2">
+          <div class="w-[42px] h-[42px] md:w-[50px] md:h-[50px] rounded-full bg-[#E31E24] flex items-center justify-center text-white font-black text-lg md:text-xl">QS</div>
+          <span class="text-[#E31E24] font-bold text-lg md:text-xl xl:text-2xl tracking-wide">QURBONOV<br class="hidden md:block" /><span class="md:hidden"> </span>SCHOOL</span>
+        </a>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-8 xl:gap-10">
+        <a href="#courses" class="text-white/90 hover:text-[#E31E24] transition-colors text-sm xl:text-base font-medium">Kurslar</a>
+        <a href="#about" class="text-white/90 hover:text-[#E31E24] transition-colors text-sm xl:text-base font-medium">Biz haqimizda</a>
+        <a href="#results" class="text-white/90 hover:text-[#E31E24] transition-colors text-sm xl:text-base font-medium">Natijalar</a>
+        <a href="#sign-up" class="text-white/90 hover:text-[#E31E24] transition-colors text-sm xl:text-base font-medium">Kursga yozilish</a>
+      </nav>
+
+      <div class="flex items-center gap-3 md:gap-4">
+        <a href="https://t.me/qurbonov_school" target="_blank" rel="noopener" class="text-white hover:rotate-[25deg] hover:scale-125 transition-all">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="https://instagram.com/qurbonov_school" target="_blank" rel="noopener" class="text-white hover:rotate-[25deg] hover:scale-125 transition-all">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="#sign-up" class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white text-sm xl:text-base font-semibold px-5 xl:px-7 py-2.5 xl:py-3 rounded-[10px] hover:opacity-90 active:opacity-70 transition-all whitespace-nowrap">
+          Ariza qoldirish
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div id="mobileMenu" class="fixed top-0 left-[-100%] w-[300px] h-full bg-[#080036] z-[60] transition-all duration-300 shadow-2xl lg:hidden">
+    <div class="flex justify-end p-4">
+      <button id="menuClose" class="text-white text-3xl">&times;</button>
+    </div>
+    <nav class="flex flex-col gap-6 px-8 mt-4">
+      <a href="#courses" class="text-white/90 hover:text-[#E31E24] text-lg font-medium transition-colors">Kurslar</a>
+      <a href="#about" class="text-white/90 hover:text-[#E31E24] text-lg font-medium transition-colors">Biz haqimizda</a>
+      <a href="#results" class="text-white/90 hover:text-[#E31E24] text-lg font-medium transition-colors">Natijalar</a>
+      <a href="#sign-up" class="text-white/90 hover:text-[#E31E24] text-lg font-medium transition-colors">Kursga yozilish</a>
+      <hr class="border-white/20" />
+      <a href="#sign-up" class="bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white text-center font-semibold px-6 py-3 rounded-[10px] hover:opacity-90 transition-all">
+        Ariza qoldirish
+      </a>
+    </nav>
+  </div>
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-[55] hidden lg:hidden"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="relative min-h-screen flex items-center bg-[#080036] overflow-hidden pt-[72px] md:pt-[90px]">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#080036_0%,_#000622_100%)]"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-4 md:px-8 xl:px-16 py-8 md:py-16 w-full">
+      <div class="grid lg:grid-cols-2 gap-8 xl:gap-16 items-center">
+        <div class="text-center lg:text-left fade-in">
+          <h1 class="text-white font-bold text-[32px] md:text-[52px] lg:text-[64px] xl:text-[72px] leading-[1.1] tracking-[0.84px] md:tracking-[2.1px] mb-6">
+            Tibbiyot yo'nalishiga kalit eshiklarini biz bilan oching!
+          </h1>
+          <p class="text-white/70 text-base md:text-lg xl:text-xl max-w-[600px] mx-auto lg:mx-0 mb-8 leading-relaxed">
+            Zamonaviy o'qitish usullari va yuqori natijalar. Tajribali ustozlar bilan
+            tibbiyot yo'nalishidagi orzularingizga erishing.
+          </p>
+          <a href="#sign-up" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold text-base md:text-lg px-8 md:px-10 py-3.5 md:py-4 rounded-[25px] hover:opacity-90 active:opacity-70 transition-all shadow-lg shadow-red-500/25">
+            Joy band qilish
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 mt-10 md:mt-14">
+            <div class="px-5 py-3 border border-white/20 rounded-[10px] text-center">
+              <div class="text-white text-2xl md:text-3xl font-bold">5000+</div>
+              <div class="text-white/60 text-xs md:text-sm">talabalar</div>
+            </div>
+            <div class="px-5 py-3 border border-white/20 rounded-[10px] text-center">
+              <div class="text-white text-2xl md:text-3xl font-bold">12+</div>
+              <div class="text-white/60 text-xs md:text-sm">yo'nalishlar</div>
+            </div>
+            <div class="px-5 py-3 border border-white/20 rounded-[10px] text-center">
+              <div class="text-white text-2xl md:text-3xl font-bold">30+</div>
+              <div class="text-white/60 text-xs md:text-sm">malakali ustozlar</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex justify-center items-center fade-in">
+          <div class="relative w-full max-w-[500px]">
+            <div class="w-[350px] h-[350px] xl:w-[450px] xl:h-[450px] rounded-full bg-gradient-to-br from-[#E31E24]/20 to-transparent blur-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+            <svg viewBox="0 0 400 400" class="w-full h-auto relative z-10 drop-shadow-2xl" fill="none">
+              <circle cx="200" cy="180" r="120" fill="#0D0B3E" stroke="#E31E24" stroke-width="2"/>
+              <circle cx="200" cy="140" r="45" fill="#E31E24" opacity="0.15"/>
+              <circle cx="200" cy="140" r="45" stroke="#E31E24" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <path d="M160 210 L200 260 L240 210" stroke="#E31E24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="200" cy="140" r="4" fill="#E31E24"/>
+              <rect x="172" y="168" width="56" height="56" rx="10" stroke="white" stroke-width="1.5" fill="none" opacity="0.3"/>
+              <path d="M175 195 L200 180 L225 195" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.3"/>
+              <circle cx="160" cy="120" r="12" fill="white" opacity="0.05"/>
+              <circle cx="240" cy="110" r="8" fill="white" opacity="0.05"/>
+              <circle cx="245" cy="170" r="6" fill="white" opacity="0.05"/>
+              <text x="200" y="310" text-anchor="middle" fill="white" font-size="14" font-family="Montserrat" font-weight="600" opacity="0.8">Tibbiyot</text>
+              <text x="200" y="330" text-anchor="middle" fill="white" font-size="12" font-family="Montserrat" opacity="0.5">kelajagingiz</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES SECTION ===== -->
+  <section id="courses" class="py-16 md:py-24 xl:py-32 px-4 md:px-8 xl:px-16 max-w-[1440px] mx-auto">
+    <div class="text-center mb-12 md:mb-16 fade-in">
+      <div class="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#080036] mb-6">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      </div>
+      <h2 class="text-[40px] md:text-[60px] xl:text-[80px] font-bold text-[#080036] leading-[1.1]">Bizning kurslar</h2>
+      <p class="text-gray-500 text-base md:text-lg mt-4 max-w-[600px] mx-auto">
+        Eng zo'r ustozlar bilan eng zo'r natijalarga erishing
+      </p>
+    </div>
+
+    <div class="swiper mySwiper !overflow-visible pb-12">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide !h-auto">
+          <div class="course-card bg-[#080036] border border-[#A6B1CD] rounded-[25px] p-6 md:p-8 h-full flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-[#080036]/20 transition-all duration-300">
+            <div class="absolute -top-[35px] left-6 w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-[#080036] border-2 border-[#A6B1CD] flex items-center justify-center z-10 shadow-lg overflow-hidden p-2">
+              <img src="images/biology.png" alt="Biologiya" class="w-full h-full object-contain" />
+            </div>
+            <h3 class="text-white text-xl md:text-2xl xl:text-[28px] font-bold text-right mb-4 mt-2">Biologiya</h3>
+            <ul class="text-white/70 text-sm md:text-base space-y-3 mb-6 flex-1">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Haftada 3 marta 3 soat
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Har oy BLOCK test
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                Yordamchi ustoz
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold py-3 rounded-[10px] hover:opacity-90 active:opacity-70 transition-all open-modal">
+              Narxni bilish
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide !h-auto">
+          <div class="course-card bg-[#080036] border border-[#A6B1CD] rounded-[25px] p-6 md:p-8 h-full flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-[#080036]/20 transition-all duration-300">
+            <div class="absolute -top-[35px] left-6 w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-[#080036] border-2 border-[#A6B1CD] flex items-center justify-center z-10 shadow-lg overflow-hidden p-2">
+              <img src="images/kimyo.png" alt="Kimyo" class="w-full h-full object-contain" />
+            </div>
+            <h3 class="text-white text-xl md:text-2xl xl:text-[28px] font-bold text-right mb-4 mt-2">Kimyo</h3>
+            <ul class="text-white/70 text-sm md:text-base space-y-3 mb-6 flex-1">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Haftada 3 marta 3 soat
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Har oy BLOCK test
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                Yordamchi ustoz
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold py-3 rounded-[10px] hover:opacity-90 active:opacity-70 transition-all open-modal">
+              Narxni bilish
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide !h-auto">
+          <div class="course-card bg-[#080036] border border-[#A6B1CD] rounded-[25px] p-6 md:p-8 h-full flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-[#080036]/20 transition-all duration-300">
+            <div class="absolute -top-[35px] left-6 w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-[#080036] border-2 border-[#A6B1CD] flex items-center justify-center z-10 shadow-lg overflow-hidden p-2">
+              <img src="images/matematika.png" alt="Matematika" class="w-full h-full object-contain" />
+            </div>
+            <h3 class="text-white text-xl md:text-2xl xl:text-[28px] font-bold text-right mb-4 mt-2">Matematika</h3>
+            <ul class="text-white/70 text-sm md:text-base space-y-3 mb-6 flex-1">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Haftada 3 marta 3 soat
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Har oy BLOCK test
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                Yordamchi ustoz
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold py-3 rounded-[10px] hover:opacity-90 active:opacity-70 transition-all open-modal">
+              Narxni bilish
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide !h-auto">
+          <div class="course-card bg-[#080036] border border-[#A6B1CD] rounded-[25px] p-6 md:p-8 h-full flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-[#080036]/20 transition-all duration-300">
+            <div class="absolute -top-[35px] left-6 w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-[#080036] border-2 border-[#A6B1CD] flex items-center justify-center z-10 shadow-lg overflow-hidden p-2">
+              <img src="images/english.png" alt="Ingliz tili" class="w-full h-full object-contain" />
+            </div>
+            <h3 class="text-white text-xl md:text-2xl xl:text-[28px] font-bold text-right mb-4 mt-2">Ingliz tili</h3>
+            <ul class="text-white/70 text-sm md:text-base space-y-3 mb-6 flex-1">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Haftada 3 marta 3 soat
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Har oy BLOCK test
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                Yordamchi ustoz
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold py-3 rounded-[10px] hover:opacity-90 active:opacity-70 transition-all open-modal">
+              Narxni bilish
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide !h-auto">
+          <div class="course-card bg-[#080036] border border-[#A6B1CD] rounded-[25px] p-6 md:p-8 h-full flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-[#080036]/20 transition-all duration-300">
+            <div class="absolute -top-[35px] left-6 w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-[#080036] border-2 border-[#A6B1CD] flex items-center justify-center z-10 shadow-lg overflow-hidden p-2">
+              <img src="images/history.png" alt="Tarix" class="w-full h-full object-contain" />
+            </div>
+            <h3 class="text-white text-xl md:text-2xl xl:text-[28px] font-bold text-right mb-4 mt-2">Tarix</h3>
+            <ul class="text-white/70 text-sm md:text-base space-y-3 mb-6 flex-1">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Haftada 3 marta 3 soat
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Har oy BLOCK test
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                Yordamchi ustoz
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold py-3 rounded-[10px] hover:opacity-90 active:opacity-70 transition-all open-modal">
+              Narxni bilish
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide !h-auto">
+          <div class="course-card bg-[#080036] border border-[#A6B1CD] rounded-[25px] p-6 md:p-8 h-full flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-[#080036]/20 transition-all duration-300">
+            <div class="absolute -top-[35px] left-6 w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-[#080036] border-2 border-[#A6B1CD] flex items-center justify-center z-10 shadow-lg overflow-hidden p-2">
+              <img src="images/ona-tili.png" alt="Ona tili" class="w-full h-full object-contain" />
+            </div>
+            <h3 class="text-white text-xl md:text-2xl xl:text-[28px] font-bold text-right mb-4 mt-2">Ona tili</h3>
+            <ul class="text-white/70 text-sm md:text-base space-y-3 mb-6 flex-1">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Haftada 3 marta 3 soat
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Har oy BLOCK test
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#E31E24] mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                Yordamchi ustoz
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold py-3 rounded-[10px] hover:opacity-90 active:opacity-70 transition-all open-modal">
+              Narxni bilish
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next !text-[#080036] !w-12 !h-12 !bg-white !rounded-lg !shadow-md after:!text-lg"></div>
+      <div class="swiper-button-prev !text-[#080036] !w-12 !h-12 !bg-white !rounded-lg !shadow-md after:!text-lg"></div>
+      <div class="swiper-pagination !relative !mt-6"></div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US SECTION ===== -->
+  <section id="about" class="py-16 md:py-24 xl:py-32 px-4 md:px-8 xl:px-16 bg-[#080036]/[0.02] relative overflow-hidden">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="text-center mb-12 md:mb-16 fade-in">
+        <div class="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#080036] mb-6">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h2 class="text-[32px] md:text-[48px] xl:text-[64px] font-bold text-[#080036] leading-[1.1]">Nima uchun aynan biz?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="why-card bg-[rgba(79,96,255,0.10)] border border-[rgba(79,96,255,0.3)] rounded-[25px] p-6 md:p-8 xl:p-10 hover:shadow-lg hover:shadow-[rgba(79,96,255,0.15)] transition-all duration-300 fade-in">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="bg-white text-[#080036] text-xs font-bold px-4 py-1.5 rounded-full">01</span>
+            <div class="w-12 h-12 rounded-full bg-[#080036] flex items-center justify-center shrink-0">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+          </div>
+          <h3 class="text-[#080036] text-xl md:text-2xl font-bold mb-2">Tajribali o'qituvchilar</h3>
+          <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+            Har bir fan bo'yicha eng tajribali va malakali ustozlar dars beradi.
+            Ustozlarimizning 10 yillik tajribasi sizning muvaffaqiyatingiz garovidir.
+          </p>
+        </div>
+
+        <div class="why-card bg-[rgba(79,96,255,0.10)] border border-[rgba(79,96,255,0.3)] rounded-[25px] p-6 md:p-8 xl:p-10 hover:shadow-lg hover:shadow-[rgba(79,96,255,0.15)] transition-all duration-300 fade-in">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="bg-white text-[#080036] text-xs font-bold px-4 py-1.5 rounded-full">02</span>
+            <div class="w-12 h-12 rounded-full bg-[#080036] flex items-center justify-center shrink-0">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+          <h3 class="text-[#080036] text-xl md:text-2xl font-bold mb-2">Muvaffaqiyat kafolati</h3>
+          <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+            Talabalarimizning 90-95 foizi o'z maqsadlariga erishadi.
+            Bu natija bizning samarali o'qitish metodikamiz bilan tasdiqlangan.
+          </p>
+        </div>
+
+        <div class="why-card bg-[rgba(79,96,255,0.10)] border border-[rgba(79,96,255,0.3)] rounded-[25px] p-6 md:p-8 xl:p-10 hover:shadow-lg hover:shadow-[rgba(79,96,255,0.15)] transition-all duration-300 fade-in">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="bg-white text-[#080036] text-xs font-bold px-4 py-1.5 rounded-full">03</span>
+            <div class="w-12 h-12 rounded-full bg-[#080036] flex items-center justify-center shrink-0">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+          </div>
+          <h3 class="text-[#080036] text-xl md:text-2xl font-bold mb-2">Individual yondashuv</h3>
+          <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+            Har bir talabaga shaxsiy yondashish, uning bilim darajasi va
+            qobiliyatiga qarab maxsus dastur tuzamiz.
+          </p>
+        </div>
+
+        <div class="why-card bg-[rgba(79,96,255,0.10)] border border-[rgba(79,96,255,0.3)] rounded-[25px] p-6 md:p-8 xl:p-10 hover:shadow-lg hover:shadow-[rgba(79,96,255,0.15)] transition-all duration-300 fade-in">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="bg-white text-[#080036] text-xs font-bold px-4 py-1.5 rounded-full">04</span>
+            <div class="w-12 h-12 rounded-full bg-[#080036] flex items-center justify-center shrink-0">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+          </div>
+          <h3 class="text-[#080036] text-xl md:text-2xl font-bold mb-2">Qo'llab quvvatlov</h3>
+          <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+            24/7 onlayn qo'llab-quvvatlash xizmati. Har qanday savolingizga
+            tezkor javob olasiz va kerakli yordam ko'rsatiladi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS SECTION ===== -->
+  <section id="results" class="py-16 md:py-24 xl:py-32 px-4 md:px-8 xl:px-16 max-w-[1440px] mx-auto">
+    <div class="text-center mb-12 md:mb-16 fade-in">
+      <div class="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#080036] mb-6">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <h2 class="text-[32px] md:text-[48px] xl:text-[64px] font-bold text-[#080036] leading-[1.1]">Natijalarimiz</h2>
+      <p class="text-gray-500 text-base md:text-lg mt-4">Talabalarimizning muvaffaqiyatlari</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-16">
+      <div class="aspect-video rounded-[25px] overflow-hidden shadow-lg fade-in">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video dars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-video rounded-[25px] overflow-hidden shadow-lg fade-in">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video dars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="text-center mb-10 fade-in">
+      <h3 class="text-2xl md:text-3xl font-bold text-[#080036]">Muvaffaqiyatli talabalar</h3>
+    </div>
+
+    <div class="swiper studentSwiper !overflow-visible pb-8">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/diyora.jpg" alt="Diyora" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Diyora</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/gulsevar.jpg" alt="Gulsevar" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Gulsevar</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/nurmuhammad.jpg" alt="Nurmuhammad" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Nurmuhammad</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/ruxsora.jpg" alt="Ruxsora" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Ruxsora</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/sabrina.jpg" alt="Sabrina" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Sabrina</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/shoxruh.jpg" alt="Shoxruh" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Shoxruh</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/axmad.jpg" alt="Axmad" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Axmad</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/mamurjon.jpg" alt="Ma'murjon" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Ma'murjon</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/mushtariybonu.jpg" alt="Mushtariybonu" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Mushtariybonu</span>
+          </div>
+        </div>
+        <div class="swiper-slide !w-[200px] md:!w-[240px]">
+          <div class="bg-[#DCDDFF] rounded-[25px] p-4 text-center hover:shadow-lg transition-all duration-300 group">
+            <div class="w-full aspect-square rounded-[20px] bg-[#080036] flex items-center justify-center mb-3 overflow-hidden">
+              <img src="images/alimuxammad.jpg" alt="Alimuxammad" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <span class="text-[#080036] font-semibold text-sm md:text-base">Alimuxammad</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination !relative !mt-6"></div>
+    </div>
+  </section>
+
+  <!-- ===== SIGN-UP FORM SECTION ===== -->
+  <section id="sign-up" class="py-16 md:py-24 xl:py-32 px-4 md:px-8 xl:px-16">
+    <div class="max-w-[800px] mx-auto bg-[#080036] rounded-[25px] md:rounded-[55px] p-6 md:p-10 xl:p-16 fade-in">
+      <div class="text-center mb-8 md:mb-10">
+        <h2 class="text-white text-2xl md:text-4xl xl:text-5xl font-bold leading-[1.2]">
+          Kursga yozilish uchun<br />ariza qoldiring
+        </h2>
+        <p class="text-white/50 text-sm md:text-base mt-3">
+          Biz siz bilan tez orada bog'lanamiz
+        </p>
+      </div>
+
+      <form id="applicationForm" class="space-y-4 md:space-y-5" novalidate>
+        <div>
+          <label for="name" class="text-white/70 text-sm font-medium mb-1.5 block">Ismingiz</label>
+          <input type="text" id="name" name="name" required placeholder="Ismingizni kiriting" class="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/30 rounded-[12px] px-4 md:px-5 py-3.5 md:py-4 text-sm md:text-base outline-none focus:border-[#E31E24] transition-colors" />
+        </div>
+        <div>
+          <label for="age" class="text-white/70 text-sm font-medium mb-1.5 block">Yoshingiz</label>
+          <input type="number" id="age" name="age" required min="5" max="60" placeholder="Yoshingizni kiriting" class="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/30 rounded-[12px] px-4 md:px-5 py-3.5 md:py-4 text-sm md:text-base outline-none focus:border-[#E31E24] transition-colors" />
+        </div>
+        <div>
+          <label for="phone" class="text-white/70 text-sm font-medium mb-1.5 block">Telefon raqamingiz</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+998 XX XXX XX XX" class="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/30 rounded-[12px] px-4 md:px-5 py-3.5 md:py-4 text-sm md:text-base outline-none focus:border-[#E31E24] transition-colors" />
+        </div>
+        <div>
+          <label for="subject" class="text-white/70 text-sm font-medium mb-1.5 block">Yo'nalish</label>
+          <select id="subject" name="subject" required class="w-full bg-white/10 border border-white/20 text-white rounded-[12px] px-4 md:px-5 py-3.5 md:py-4 text-sm md:text-base outline-none focus:border-[#E31E24] transition-colors">
+            <option value="" disabled selected class="text-gray-400">Yo'nalishni tanlang</option>
+            <option value="Biologiya" class="text-[#080036]">Biologiya</option>
+            <option value="Kimyo" class="text-[#080036]">Kimyo</option>
+            <option value="Matematika" class="text-[#080036]">Matematika</option>
+            <option value="Ingliz tili" class="text-[#080036]">Ingliz tili</option>
+            <option value="Tarix" class="text-[#080036]">Tarix</option>
+            <option value="Ona tili" class="text-[#080036]">Ona tili</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-bold text-base md:text-lg py-3.5 md:py-4 rounded-[12px] hover:opacity-90 active:opacity-70 transition-all shadow-lg shadow-red-500/25">
+          Yuborish
+        </button>
+      </form>
+
+      <div id="successMessage" class="hidden text-center py-8">
+        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 class="text-white text-xl md:text-2xl font-bold">Ariza qabul qilindi!</h3>
+        <p class="text-white/60 mt-2">Tez orada siz bilan bog'lanamiz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / MAP ===== -->
+  <section class="py-16 md:py-24 px-4 md:px-8 xl:px-16 bg-gray-50">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-[32px] md:text-[48px] font-bold text-[#080036]">Biz bilan bog'laning</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start fade-in">
+        <div class="space-y-6">
+          <div class="flex items-center gap-4 p-5 bg-white rounded-[20px] shadow-sm hover:shadow-md transition-all">
+            <div class="w-12 h-12 rounded-full bg-[#080036] flex items-center justify-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">Telefon</p>
+              <a href="tel:+998334850008" class="text-[#080036] font-semibold text-lg hover:text-[#E31E24] transition-colors">+998 33 485 00 08</a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-5 bg-white rounded-[20px] shadow-sm hover:shadow-md transition-all">
+            <div class="w-12 h-12 rounded-full bg-[#080036] flex items-center justify-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">Manzil</p>
+              <p class="text-[#080036] font-semibold text-lg">Toshkent shahri, Chilonzor tumani</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-5 bg-white rounded-[20px] shadow-sm hover:shadow-md transition-all">
+            <div class="w-12 h-12 rounded-full bg-[#080036] flex items-center justify-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">Email</p>
+              <a href="mailto:info@qurbonov-school.uz" class="text-[#080036] font-semibold text-lg hover:text-[#E31E24] transition-colors">info@qurbonov-school.uz</a>
+            </div>
+          </div>
+
+          <div class="flex gap-4 pt-2">
+            <a href="https://t.me/qurbonov_school" target="_blank" rel="noopener" class="w-12 h-12 rounded-full bg-[#080036] text-white flex items-center justify-center hover:bg-[#E31E24] transition-all hover:rotate-[25deg] hover:scale-125">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="https://instagram.com/qurbonov_school" target="_blank" rel="noopener" class="w-12 h-12 rounded-full bg-[#080036] text-white flex items-center justify-center hover:bg-[#E31E24] transition-all hover:rotate-[25deg] hover:scale-125">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-[25px] overflow-hidden shadow-lg h-[300px] md:h-[400px]">
+          <iframe src="https://yandex.com/map-widget/v1/?ll=69.252500%2C41.317050&z=15&pt=69.252500,41.317050,pm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-[#080036] text-white py-10 md:py-16 px-4 md:px-8 xl:px-16">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-[42px] h-[42px] rounded-full bg-[#E31E24] flex items-center justify-center font-black text-lg">QS</div>
+            <span class="text-[#E31E24] font-bold text-xl">QURBONOV SCHOOL</span>
+          </div>
+          <p class="text-white/50 text-sm leading-relaxed max-w-[300px]">
+            Zamonaviy o'qitish usullari va yuqori natijalar. Tibbiyot yo'nalishidagi
+            orzularingizni biz bilan ro'yobga chiqaring.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg mb-4">Sahifalar</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="#courses" class="text-white/60 hover:text-[#E31E24] transition-colors text-sm">Kurslar</a>
+            <a href="#about" class="text-white/60 hover:text-[#E31E24] transition-colors text-sm">Biz haqimizda</a>
+            <a href="#results" class="text-white/60 hover:text-[#E31E24] transition-colors text-sm">Natijalar</a>
+            <a href="#sign-up" class="text-white/60 hover:text-[#E31E24] transition-colors text-sm">Kursga yozilish</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg mb-4">Aloqa</h4>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+998334850008" class="text-white/60 hover:text-[#E31E24] transition-colors text-sm">+998 33 485 00 08</a>
+            <a href="tel:+998956360008" class="text-white/60 hover:text-[#E31E24] transition-colors text-sm">+998 95 636 00 08</a>
+            <a href="mailto:info@qurbonov-school.uz" class="text-white/60 hover:text-[#E31E24] transition-colors text-sm">info@qurbonov-school.uz</a>
+            <p class="text-white/40 text-sm">Toshkent shahri, Chilonzor tumani</p>
+          </div>
+          <div class="flex gap-3 mt-4">
+            <a href="https://t.me/qurbonov_school" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E31E24] transition-all">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="https://instagram.com/qurbonov_school" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E31E24] transition-all">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
+        <p class="text-white/30 text-xs md:text-sm">
+          &copy; 2024 Qurbonov School. Barcha huquqlar himoyalangan.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+  <div id="priceModal" class="fixed inset-0 z-[70] flex items-center justify-center hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="modalOverlay"></div>
+    <div class="relative bg-white rounded-[25px] p-6 md:p-10 max-w-[500px] w-full mx-4 shadow-2xl fade-in">
+      <button id="modalClose" class="absolute top-4 right-4 text-gray-400 hover:text-[#080036] text-2xl transition-colors">&times;</button>
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 rounded-full bg-[#080036] flex items-center justify-center mx-auto mb-4">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </div>
+        <h3 class="text-[#080036] text-2xl font-bold">Narxni bilish</h3>
+        <p class="text-gray-500 text-sm mt-2">Narx haqida ma'lumot olish uchun ariza qoldiring</p>
+      </div>
+      <form id="modalForm" class="space-y-4" novalidate>
+        <input type="text" name="modal_name" required placeholder="Ismingiz" class="w-full border border-gray-300 rounded-[12px] px-4 py-3.5 text-sm outline-none focus:border-[#E31E24] transition-colors" />
+        <input type="number" name="modal_age" required min="5" max="60" placeholder="Yoshingiz" class="w-full border border-gray-300 rounded-[12px] px-4 py-3.5 text-sm outline-none focus:border-[#E31E24] transition-colors" />
+        <input type="tel" name="modal_phone" required placeholder="+998 XX XXX XX XX" class="w-full border border-gray-300 rounded-[12px] px-4 py-3.5 text-sm outline-none focus:border-[#E31E24] transition-colors" />
+        <button type="submit" class="w-full bg-gradient-to-r from-[#FF4646] to-[#EB2828] text-white font-semibold py-3.5 rounded-[12px] hover:opacity-90 transition-all">
+          Yuborish
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

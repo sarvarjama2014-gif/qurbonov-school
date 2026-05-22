@@ -2,11 +2,15 @@
   "name": "qurbonov-school",
   "version": "1.0.0",
   "description": "Qurbonov School – ta'lim markazi veb-sayti",
+  "main": "backend/server.js",
   "scripts": {
-    "install:all": "npm install --prefix backend",
-    "dev:backend": "npm run dev --prefix backend",
-    "dev:frontend": "npx serve frontend -l 3000",
-    "dev": "npm run dev:backend",
-    "start": "npm run start --prefix backend"
+    "start": "NODE_ENV=production node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.0"
   }
 }

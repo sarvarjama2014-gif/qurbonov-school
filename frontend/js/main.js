@@ -40,15 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ===== SWIPER INIT =====
-  var courseSwiper = new Swiper('.mySwiper', {
+  window.courseSwiper = new Swiper('.mySwiper', {
     slidesPerView: 'auto',
     spaceBetween: 24,
     centeredSlides: false,
     loop: false,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

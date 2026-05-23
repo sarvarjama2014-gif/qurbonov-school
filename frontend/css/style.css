@@ -41,20 +41,18 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: flex;
-  }
+  width: 44px !important;
+  height: 44px !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 18px !important;
   font-weight: 700;
+  color: #080036;
 }
 
 .swiper-pagination-bullet {

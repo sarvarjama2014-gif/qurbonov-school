@@ -41,6 +41,7 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
+  display: flex !important;
   width: 44px !important;
   height: 44px !important;
   background: white !important;

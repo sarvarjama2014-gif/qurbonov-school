@@ -144,7 +144,7 @@ select option {
 }
 
 @media (max-width: 768px) {
-  .swiper-slide {
-    width: 280px !important;
+  .studentSwiper .swiper-slide {
+    width: 180px !important;
   }
 }
